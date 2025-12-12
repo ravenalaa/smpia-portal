@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f6f9;
+    }
+
+    .header {
+      background: #1e3c72;
+      color: white;
+      padding: 15px 25px;
+    }
+
+    .header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+
+    .container {
+      padding: 25px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #1e3c72;
+    }
+
+    .stats {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .stat-box {
+      flex: 1;
+      min-width: 180px;
+      background: #eef2f7;
+      padding: 15px;
+      border-radius: 6px;
+    }
+
+    .stat-box h4 {
+      margin: 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .stat-box p {
+      margin: 8px 0 0;
+      font-size: 22px;
+      font-weight: bold;
+      color: #1e3c72;
+    }
+
+    label {
+      font-size: 14px;
+      color: #333;
+    }
+
+    input[type="number"],
+    input[type="time"] {
+      padding: 8px;
+      margin-top: 5px;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #1e3c72;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #16315c;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #777;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Dashboard Admin IT</h1>
+  </div>
+
+  <div class="container">
+
+    <div class="card">
+      <h3>Status Jaringan (Dummy)</h3>
+      <div class="stats">
+        <div class="stat-box">
+          <h4>Siswa Online</h4>
+          <p>120</p>
+        </div>
+        <div class="stat-box">
+          <h4>Sesi Aktif</h4>
+          <p>118</p>
+        </div>
+        <div class="stat-box">
+          <h4>Bandwidth Digunakan</h4>
+          <p>85%</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Pengaturan Sesi Login</h3>
+
+      <label>Jam Mulai Sekolah</label><br>
+      <input type="time" value="07:00"><br><br>
+
+      <label>Jam Selesai Sekolah</label><br>
+      <input type="time" value="15:00"><br><br>
+
+      <label>Durasi Maksimum Sesi (jam)</label><br>
+      <input type="number" value="8"><br>
+
+      <button class="btn">Simpan Pengaturan</button>
+    </div>
+
+  </div>
+
+</body>
+</html>

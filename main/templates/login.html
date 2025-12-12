@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Portal Login SMPIA 10 Kembangan</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-box {
+      background: #ffffff;
+      width: 360px;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+    .login-box h2 {
+      text-align: center;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .login-box p {
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-size: 14px;
+      color: #333;
+    }
+
+    .logo {
+        width: 130px;
+        display: block;
+        margin: 0 auto 20px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 6px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #1e3c72;
+      border: none;
+      color: white;
+      font-size: 15px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #16315c;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 12px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+
+    <img src="{% static 'logo.png' %}" class="logo" alt="Logo Sekolah">
+    <h2>Portal Internet SMPIA 10 Kembangan</h2>
+
+    <form method="post">
+      {% csrf_token %}
+      <label>NIS</label>
+      <input type="text" name="nis" placeholder="Masukkan NIS">
+
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Masukkan password">
+
+      <button type="submit">Login</button>
+    </form>
+
+    <div class="footer">
+      © 2025 Sistem Informasi Sekolah SMPIA 10 Kembangan
+    </div>
+  </div>
+
+</body>
+</html>
